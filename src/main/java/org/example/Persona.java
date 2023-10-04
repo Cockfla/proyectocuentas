@@ -11,7 +11,7 @@ public class Persona implements IPersona {
     }
 
     @Override
-    public void VerInformacionCuenta(){
+    public void VerInformacion(){
         System.out.println(rut);
         System.out.println(nombre);
     }
