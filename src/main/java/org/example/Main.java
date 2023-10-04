@@ -14,7 +14,7 @@ public class Main {
     Ejecutivo1.VerCuentasAgregadas();
         Cliente clientexd= new Cliente("20.659.872-7","Maria jesus");
         Ejecutivo1.AgregarCuentaCorriente(clientexd,"20.659.872-7","Maria jesus","anashe","xds",300000);
-        clientexd.verInformacionCuenta();
+        clientexd.verInformacion();
         Ejecutivo1.VerCuentasAgregadas();
     }
 }
