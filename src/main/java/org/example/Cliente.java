@@ -1,21 +1,27 @@
 package org.example;
 
-public class Cliente{
-    private String rut;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Cliente extends Persona {
     private Cuenta cuenta;
-    public Cliente(String rut){
-        this.rut=rut;
+    private List<Cuenta> cuentas;
+
+    public Cliente(String rut, String nombre) {
+        super(rut, nombre);
+        this.cuentas = new ArrayList<>();
     }
-    public String getRut(){
-        return this.rut;
+
+    public void agregarCuenta(Cuenta cuenta) {
+        cuentas.add(cuenta);
     }
-    public void asignarCuenta(Cuenta cuenta){
-        this.cuenta=cuenta;
-    }
-    public void verInformacionCuenta(){
-        if(cuenta!=null){
-            System.out.println(cuenta.toString());
-        }else{
+
+    public void verInformacion() {
+        if (!cuentas.isEmpty()) {
+           for(Cuenta cuenta:cuentas){
+               System.out.println(cuenta.toString());
+           }
+           }else{
             System.out.println("No se ha asignado ninguna cuenta a este cliente");
         }
     }
